@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-weight: 400;
+  src: url("./assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Instrument Sans Italic";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/fonts/InstrumentSans-Italic-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+}
+
+html,
+body,
+#root {
+  @apply bg-lightGray h-full;
+}
+
+input {
+  @apply caret-purple;
+}
+*,
+*:before,
+*:after {
+  @apply font-instrumentSans select-none;
+}
+.nav-link.active {
+  @apply text-purple bg-lightPurple;
+}
+.nav-link:hover {
+  @apply text-purple;
+}
+.nav-link:hover svg path,
+.nav-link.active svg path {
+  @apply fill-purple;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  @apply bg-darkGrey/10;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-darkGrey/25;
+}
+
+.not-scroll::-webkit-scrollbar {
+  width: 0px;
+}
+
+.color-transform {
+  filter: url(#color-transform-filter);
+}
